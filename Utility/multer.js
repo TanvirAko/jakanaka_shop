@@ -9,7 +9,7 @@ const storage= multer.diskStorage({
         cb(null,"public/product_photo")
     },
     filename: (req,file,cb)=>{
-        cb(null, Math.floor(Math.random() * 1000000) + "_____" + file.originalname)
+        cb(null, Math.floor(Math.random() * 1000000) + "_" + file.originalname)
     },
 })
 
